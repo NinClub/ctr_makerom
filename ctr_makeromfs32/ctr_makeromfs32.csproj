@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A269C814-E8E7-44CB-A023-D97BACF1D99A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ctr_makeromfs32</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nintendo.MakeRom.MakeFS\Creator.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\DulicatedPathException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\FileNotFoundException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InternalException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidFileFormatException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidInputParameterException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidInputStreamException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidLayoutException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidOutputStreamException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\InvalidPathFormatException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\Layouter.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\MakeFSException.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\MetaGenerator.cs" />
+    <Compile Include="Nintendo.MakeRom.MakeFS\NullStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

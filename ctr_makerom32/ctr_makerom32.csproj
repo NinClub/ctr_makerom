@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ctr_makerom32</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="makerom.Ncsd2\Ccl.cs" />
+    <Compile Include="makerom.Ncsd2\Ncsd2bCciInfo.cs" />
+    <Compile Include="makerom.Ncsd2\Ncsd2bCciInfoRoot.cs" />
+    <Compile Include="makerom.Ncsd2\Ncsd2bContentsInfo.cs" />
+    <Compile Include="makerom.Ncsd2\NcsdBinary2.cs" />
+    <Compile Include="makerom.Ncsd2\NcsdBinary2a.cs" />
+    <Compile Include="makerom.Ncsd2\NcsdBinary2b.cs" />
+    <Compile Include="makerom.Properties\Resources.cs" />
+    <Compile Include="makerom\CardInfo.cs" />
+    <Compile Include="makerom\CardInfoHeader.cs" />
+    <Compile Include="makerom\CardInfoHeaderStruct.cs" />
+    <Compile Include="makerom\CciInfo.cs" />
+    <Compile Include="makerom\MakeCciOptions.cs" />
+    <Compile Include="makerom\Ncsd.cs" />
+    <Compile Include="makerom\NcsdCommonHeader.cs" />
+    <Compile Include="makerom\NcsdCommonHeaderStruct.cs" />
+    <Compile Include="makerom\NcsdHeader.cs" />
+    <Compile Include="makerom\Option.cs" />
+    <Compile Include="makerom\OptionParser.cs" />
+    <Compile Include="makerom\Program.cs" />
+    <Compile Include="makerom\StringExtensions.cs" />
+    <Compile Include="makerom\Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="makerom.Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\makerom\makerom.csproj">
+      <Project>{3a1c5d01-8e86-423e-9f52-fcb5bb6dd332}</Project>
+      <Name>makerom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nyaml\Nyaml.csproj">
+      <Project>{2f35bd60-b9f8-493b-af32-c3809d8fc0db}</Project>
+      <Name>Nyaml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

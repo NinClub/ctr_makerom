@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Nyaml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="nyaml\BlockScalar.cs" />
+    <Compile Include="nyaml\Collection.cs" />
+    <Compile Include="nyaml\CollectionElement.cs" />
+    <Compile Include="nyaml\ISemanticAction.cs" />
+    <Compile Include="nyaml\Mapping.cs" />
+    <Compile Include="nyaml\Nyaml.cs" />
+    <Compile Include="nyaml\Parser.cs" />
+    <Compile Include="nyaml\Program.cs" />
+    <Compile Include="nyaml\RegexPattern.cs" />
+    <Compile Include="nyaml\Scalar.cs" />
+    <Compile Include="nyaml\ScalarBool.cs" />
+    <Compile Include="nyaml\ScalarInteger.cs" />
+    <Compile Include="nyaml\ScalarLong.cs" />
+    <Compile Include="nyaml\ScalarNull.cs" />
+    <Compile Include="nyaml\ScalarString.cs" />
+    <Compile Include="nyaml\Scanner.cs" />
+    <Compile Include="nyaml\SemanticAction.cs" />
+    <Compile Include="nyaml\Sequence.cs" />
+    <Compile Include="nyaml\StackOverflowException.cs" />
+    <Compile Include="nyaml\SyntaxErrorException.cs" />
+    <Compile Include="nyaml\Token.cs" />
+    <Compile Include="nyaml\TokenItem.cs" />
+    <Compile Include="nyaml\WrongCastException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

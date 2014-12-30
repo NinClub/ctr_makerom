@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ctr_makerom32", "ctr_makerom32\ctr_makerom32.csproj", "{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ctr_makeromfs32", "ctr_makeromfs32\ctr_makeromfs32.csproj", "{A269C814-E8E7-44CB-A023-D97BACF1D99A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "makerom", "makerom\makerom.csproj", "{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyaml", "Nyaml\Nyaml.csproj", "{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ctr_crr", "ctr_crr\ctr_crr.csproj", "{DBCE26FB-D343-477C-9D42-F95D4CF629C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}.Debug|x86.ActiveCfg = Debug|x86
+		{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}.Debug|x86.Build.0 = Debug|x86
+		{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}.Release|x86.ActiveCfg = Release|x86
+		{FD0C2040-CDFC-4E85-964C-9CFA61F13B50}.Release|x86.Build.0 = Release|x86
+		{A269C814-E8E7-44CB-A023-D97BACF1D99A}.Debug|x86.ActiveCfg = Debug|x86
+		{A269C814-E8E7-44CB-A023-D97BACF1D99A}.Debug|x86.Build.0 = Debug|x86
+		{A269C814-E8E7-44CB-A023-D97BACF1D99A}.Release|x86.ActiveCfg = Release|x86
+		{A269C814-E8E7-44CB-A023-D97BACF1D99A}.Release|x86.Build.0 = Release|x86
+		{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}.Debug|x86.ActiveCfg = Debug|x86
+		{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}.Debug|x86.Build.0 = Debug|x86
+		{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}.Release|x86.ActiveCfg = Release|x86
+		{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}.Release|x86.Build.0 = Release|x86
+		{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}.Debug|x86.ActiveCfg = Debug|x86
+		{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}.Debug|x86.Build.0 = Debug|x86
+		{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}.Release|x86.ActiveCfg = Release|x86
+		{2F35BD60-B9F8-493B-AF32-C3809D8FC0DB}.Release|x86.Build.0 = Release|x86
+		{DBCE26FB-D343-477C-9D42-F95D4CF629C4}.Debug|x86.ActiveCfg = Debug|x86
+		{DBCE26FB-D343-477C-9D42-F95D4CF629C4}.Debug|x86.Build.0 = Debug|x86
+		{DBCE26FB-D343-477C-9D42-F95D4CF629C4}.Release|x86.ActiveCfg = Release|x86
+		{DBCE26FB-D343-477C-9D42-F95D4CF629C4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3A1C5D01-8E86-423E-9F52-FCB5BB6DD332}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>makerom</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ctr_makeromfscore32">
+      <HintPath>..\reference\ctr_makeromfscore32.dll</HintPath>
+    </Reference>
+    <Reference Include="ctr_makeromfshash32">
+      <HintPath>..\reference\ctr_makeromfshash32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nintendo.MakeRom.Extensions\PipeStream.cs" />
+    <Compile Include="Nintendo.MakeRom.Extensions\Profiler.cs" />
+    <Compile Include="Nintendo.MakeRom.Extensions\ProfilingDepth.cs" />
+    <Compile Include="Nintendo.MakeRom.Extensions\ProfilingResult.cs" />
+    <Compile Include="Nintendo.MakeRom.Extensions\ProgramIDReplacedCxiStream.cs" />
+    <Compile Include="Nintendo.MakeRom.Extensions\ThreadSafeBlockQueue.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\DataResource.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\FastBuildRomFsBinary.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\FastBuildRomFsDataBlock.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\FastBuildRomfsHeader.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\FastBuildRomFsInfo.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\HexableNumber.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\LayoutLocal.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.FastBuildRomfs\ResourceType.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\DotRomFsBinary.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\FileBinaryRegistory.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\FileNameTable.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\IRomFsBinary.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\RomFsDataBlock.cs" />
+    <Compile Include="Nintendo.MakeRom.Ncch.RomFs\RomFsSuperBlock.cs" />
+    <Compile Include="Nintendo.MakeRom.Properties\Resources.cs" />
+    <Compile Include="Nintendo.MakeRom.Test\RomfsInfoXmlTest.cs" />
+    <Compile Include="Nintendo.MakeRom\AccessControlInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\AccessControlInfoBase.cs" />
+    <Compile Include="Nintendo.MakeRom\AddressChecker.cs" />
+    <Compile Include="Nintendo.MakeRom\AddressMapping.cs" />
+    <Compile Include="Nintendo.MakeRom\AddressMappingException.cs" />
+    <Compile Include="Nintendo.MakeRom\AesCcm.cs" />
+    <Compile Include="Nintendo.MakeRom\AesCounter.cs" />
+    <Compile Include="Nintendo.MakeRom\AesCtr.cs" />
+    <Compile Include="Nintendo.MakeRom\AffinityMask.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11KernelCapabilities.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11KernelCapabilityDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11KernelCapabilityFlag.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11KernelCapabilityFlagsDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11SystemLocalCapabilities.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM11SystemLocalCapabilityFlags.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM9AccessControlInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\ARM9AccessControlInfoDesc.cs" />
+    <Compile Include="Nintendo.MakeRom\BinaryArray.cs" />
+    <Compile Include="Nintendo.MakeRom\BinaryList.cs" />
+    <Compile Include="Nintendo.MakeRom\ByteArrayData.cs" />
+    <Compile Include="Nintendo.MakeRom\ByteData.cs" />
+    <Compile Include="Nintendo.MakeRom\CodeBinaries.cs" />
+    <Compile Include="Nintendo.MakeRom\CodeInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\CodeSegment.cs" />
+    <Compile Include="Nintendo.MakeRom\CodeSegmentInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\CodeSetInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\CompFooter.cs" />
+    <Compile Include="Nintendo.MakeRom\Compress.cs" />
+    <Compile Include="Nintendo.MakeRom\ContentsCoreInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\ContentsInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\CoreInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\CoreInfoFlags.cs" />
+    <Compile Include="Nintendo.MakeRom\CrrReader.cs" />
+    <Compile Include="Nintendo.MakeRom\CrrUpdater.cs" />
+    <Compile Include="Nintendo.MakeRom\CxiOption.cs" />
+    <Compile Include="Nintendo.MakeRom\DependencyList.cs" />
+    <Compile Include="Nintendo.MakeRom\Elf.cs" />
+    <Compile Include="Nintendo.MakeRom\ElfHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\ElfProgramHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\ElfSectionHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\ElfSectionHeaderInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\ElfSegment.cs" />
+    <Compile Include="Nintendo.MakeRom\ExeFsBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\ExeFsDataBlock.cs" />
+    <Compile Include="Nintendo.MakeRom\ExeFsSuperBlock.cs" />
+    <Compile Include="Nintendo.MakeRom\ExeSectionHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\ExeSectionHeaderStruct.cs" />
+    <Compile Include="Nintendo.MakeRom\FileSearcher.cs" />
+    <Compile Include="Nintendo.MakeRom\FinishAesEventArgs.cs" />
+    <Compile Include="Nintendo.MakeRom\FinishAesEventHandler.cs" />
+    <Compile Include="Nintendo.MakeRom\HandleTableSize.cs" />
+    <Compile Include="Nintendo.MakeRom\HandleTableSizeDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\InterruptNumberDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\InterruptNumberList.cs" />
+    <Compile Include="Nintendo.MakeRom\InvalidParameterException.cs" />
+    <Compile Include="Nintendo.MakeRom\IoMapping.cs" />
+    <Compile Include="Nintendo.MakeRom\IWritableBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\MakeCxi.cs" />
+    <Compile Include="Nintendo.MakeRom\MakeCxiOptions.cs" />
+    <Compile Include="Nintendo.MakeRom\MakeromException.cs" />
+    <Compile Include="Nintendo.MakeRom\MappingDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\MulticoreCryptoStream.cs" />
+    <Compile Include="Nintendo.MakeRom\MulticoreCryptoStreamReader.cs" />
+    <Compile Include="Nintendo.MakeRom\MulticoreCryptoWorker.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchAccessControlExtended.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchBinaryCore.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchCipExtendedHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchCipHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchCommonHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchCommonHeaderFlag.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchCommonHeaderStruct.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchExtendedHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchFileBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\NcchHeader.cs" />
+    <Compile Include="Nintendo.MakeRom\NotPermittedValueException.cs" />
+    <Compile Include="Nintendo.MakeRom\NyamlAccessControlDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\NyamlDescParameter.cs" />
+    <Compile Include="Nintendo.MakeRom\NyamlOption.cs" />
+    <Compile Include="Nintendo.MakeRom\NyamlOptionStrings.cs" />
+    <Compile Include="Nintendo.MakeRom\NyamlParameter.cs" />
+    <Compile Include="Nintendo.MakeRom\Option.cs" />
+    <Compile Include="Nintendo.MakeRom\OptionParser.cs" />
+    <Compile Include="Nintendo.MakeRom\OtherCapabilities.cs" />
+    <Compile Include="Nintendo.MakeRom\OtherCapabilityDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\Parameter.cs" />
+    <Compile Include="Nintendo.MakeRom\ParameterNotFoundException.cs" />
+    <Compile Include="Nintendo.MakeRom\ParentalControlInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\PlainRegionBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\Range.cs" />
+    <Compile Include="Nintendo.MakeRom\Region.cs" />
+    <Compile Include="Nintendo.MakeRom\ReleaseKernelVersion.cs" />
+    <Compile Include="Nintendo.MakeRom\ReleaseKernelVersionDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\ReservedBlock.cs" />
+    <Compile Include="Nintendo.MakeRom\ResourceLimitDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\RomFsBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\RomFsInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\RomfsOnlyNcchBinary.cs" />
+    <Compile Include="Nintendo.MakeRom\Rsa.cs" />
+    <Compile Include="Nintendo.MakeRom\SByteData.cs" />
+    <Compile Include="Nintendo.MakeRom\ServiceAccessControl.cs" />
+    <Compile Include="Nintendo.MakeRom\ServiceName.cs" />
+    <Compile Include="Nintendo.MakeRom\StaticMapping.cs" />
+    <Compile Include="Nintendo.MakeRom\StorageInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\StorageInfoFlags.cs" />
+    <Compile Include="Nintendo.MakeRom\StorageInfoStruct.cs" />
+    <Compile Include="Nintendo.MakeRom\StringExtensions.cs" />
+    <Compile Include="Nintendo.MakeRom\StructData.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemCallAccessControl.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemCallAccessControlDescriptor.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemControlInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemInfo.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemInfoFlags.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemInfoFlagStruct.cs" />
+    <Compile Include="Nintendo.MakeRom\SystemInfoStruct.cs" />
+    <Compile Include="Nintendo.MakeRom\TData.cs" />
+    <Compile Include="Nintendo.MakeRom\TitleIdUtil.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt16Data.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt32Data.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt64Data.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt64Name.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt64NameArray.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt64ProgramId.cs" />
+    <Compile Include="Nintendo.MakeRom\UInt64ProgramIdArray.cs" />
+    <Compile Include="Nintendo.MakeRom\UnknownParameterException.cs" />
+    <Compile Include="Nintendo.MakeRom\Util.cs" />
+    <Compile Include="Nintendo.MakeRom\Warning.cs" />
+    <Compile Include="Nintendo.MakeRom\WritableBinaryRegistory.cs" />
+    <Compile Include="Nintendo.MakeRom\WritableCryptoBinaryRegistory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Nintendo.MakeRom.Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ctr_crr\ctr_crr.csproj">
+      <Project>{dbce26fb-d343-477c-9d42-f95d4cf629c4}</Project>
+      <Name>ctr_crr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ctr_makeromfs32\ctr_makeromfs32.csproj">
+      <Project>{a269c814-e8e7-44cb-a023-d97bacf1d99a}</Project>
+      <Name>ctr_makeromfs32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nyaml\Nyaml.csproj">
+      <Project>{2f35bd60-b9f8-493b-af32-c3809d8fc0db}</Project>
+      <Name>Nyaml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
